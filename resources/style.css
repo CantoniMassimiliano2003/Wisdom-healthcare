@@ -1,0 +1,558 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font-size: inherit;
+    text-decoration: none;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+:root
+{
+    --fontHeading: 'Playfair Display', serif;
+    --fontBody: 'Roboto', sans-serif;
+
+    --clr-main: #1F4D36;
+    --clr-black: black;
+    --clr-background: #F2F4EA;
+    --clr-accent: #F1EABA;
+    --clr-outline: #C7D3C4;
+}
+
+body
+{
+    background-color: var(--clr-background);
+    font-size:1.2rem;
+    font-family: var(--fontBody);
+    color:var(--clr-main)
+}
+
+
+
+.columnContainer
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headingBanner
+{
+    text-align: center;
+    background-color: var(--clr-main);
+    color:var(--clr-background);
+    padding:0.5rem;
+}
+
+.navigation
+{
+    width: 85%;
+    margin:auto;
+    border-bottom:solid 2px var(--clr-main);
+    padding-top:2rem;
+    padding-bottom:2rem;
+    align-items: center;
+    color:var(--clr-main)
+
+}
+
+
+
+svg
+{
+    display: inline;
+}
+
+.navigation svg
+{
+
+    margin-right:1.2rem;
+}
+
+
+.navigation .logo
+{
+
+    font-size: 1.7rem;
+    display: flex;
+}
+
+.navigation li
+{
+    display: inline;
+    margin-left:2rem;
+}
+.navigation li a
+{
+    text-decoration: none;
+    color: var(--clr-main);
+    font-weight: 400;
+    transition: 300ms;
+}
+
+.navigation li a:hover
+{
+    font-weight: 700;
+
+}
+
+.button
+{
+
+    border-radius: 20px;
+    padding-left:1.2rem;
+    padding-right:1.2rem;
+    padding-top:0.3rem;
+    padding-bottom:0.3rem;
+}
+
+.buttonTransparent
+{
+    border:solid 1px var(--clr-main);
+    background-color: rgba(0, 0, 255, 0);
+    transition: 200ms;
+    color:var(--clr-main);
+}
+
+.buttonTransparent:hover
+{
+    color:var(--clr-background);
+    background-color: var(--clr-main);
+}
+
+.buttonDark
+{
+    border:solid 1px var(--clr-main);
+    background-color: var(--clr-main);
+    color:var(--clr-background);
+    transition: 300ms;
+}
+
+.buttonDark:hover
+{
+    color:var(--clr-accent);
+
+}
+
+.headingColumns
+{
+    
+    width: 85%;
+    margin:auto;
+    justify-content: flex-end;
+    margin-top:5rem;
+}
+
+.headingColumns >div
+{
+    width:50%;
+}
+
+.bigHeadingImage
+{
+    margin-left:auto;
+    border-radius: 20px;
+}
+
+.colonnaHeaderImmagini
+{
+    position: relative;
+}
+
+.squareEffect
+{
+    width:25rem;
+    height:42rem;
+    border:solid 2px var(--clr-outline);
+    position:absolute;
+    top:1rem;
+    right:4rem;
+    border-radius: 20px;
+
+}
+
+.pills
+{
+    position:absolute;
+    right:30rem;
+    z-index:-1;
+}
+
+.orangeThing
+{
+    position:absolute;
+    right:0;
+    bottom:0.01rem;
+}
+
+.immaginePiccola
+{
+    position:absolute;
+    top:75%;
+    left:12%;
+}
+
+.colonnaHeaderTitoli h1
+{
+    font-family: var(--fontHeading);
+    font-size: 6rem;
+    line-height: 7rem;
+    display: inline;
+
+}
+
+
+.colonnaHeaderTitoli img
+{
+    display:inline;
+    margin-left:1rem;
+}
+
+.colonnaHeaderTitoli >*
+{
+    margin-top:2rem;
+}
+
+.darkSection
+{
+    background-color: var(--clr-main);
+    color: var(--clr-background);
+}
+
+.contentSection
+{
+    margin-top:10rem;
+    text-align:center;
+    font-family: var(--fontBody);
+    padding-top:3rem;
+    padding-bottom:19rem;
+}
+
+.contentSection img
+{
+    display: inline;
+}
+
+.contentSection h2
+{
+    font-size:5rem;
+    font-family: var(--fontHeading);
+    display:inline;
+
+}
+
+.contentSection h3
+{
+    font-size:2rem;
+    font-family: var(--fontHeading);
+}
+
+.containerSection
+{
+    margin:auto;
+    margin-top:6rem;
+    width:70%;
+}
+
+.containerSection >div
+{
+    width:24%;
+    
+}
+
+.tondo
+{
+    width:10rem;
+    height:10rem;
+    background-color: var(--clr-accent);
+    border-radius:100%;
+    margin:auto;
+    position:relative;
+    display:grid;
+ 
+}
+
+.tondo img
+{
+    place-self: center;
+    max-width:60%;
+}
+
+.cardCondition >*
+{
+    margin-bottom:1.2rem;
+    
+}
+
+.cardCondition a
+{
+    color:var(--clr-background)
+}
+
+.endingSection
+{
+    
+    padding-bottom:4rem;
+    position:relative;
+
+}
+
+.sfondoEndingSection 
+{
+    width:80%;
+    min-height:35rem;
+    background-image: url("../images/finale.png");
+    background-size:cover;
+    margin:auto;
+    border-radius: 30px;
+    color:var(--clr-background);
+    display:grid;
+    align-content:center;
+    margin-top:-6rem;
+    position:relative;
+}
+
+.sfondoEndingSection >*
+{
+    place-items:center;
+    text-align:center;
+    margin:auto;
+}
+
+.yellowBox
+{
+    background-color: var(--clr-accent);
+    min-width:40%;
+    padding:1.4rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-radius:10px;
+    color:var(--clr-main);  
+}
+
+.endingSection h2
+{
+    font-family: var(--fontHeading);
+    font-size:5.5rem;
+}
+
+.endingSection p
+{
+    max-width:50%;
+    
+}
+
+.endingSection a
+{
+    color:var(--clr-background);
+    z-index:2;
+}
+
+.endingSection a img
+{
+    display:inline;
+}
+
+.endingSection .cornice
+{
+    position:absolute;
+    width:95%;
+    height:90%;
+    place-self: center;
+    border:solid var(--clr-outline) 2px;
+    border-radius:20px;
+    z-index:1;
+}
+
+.linea
+{
+    position:absolute;
+    top:-5.75rem;
+    z-index: 100;
+}
+
+footer
+{
+    text-align:center;
+    margin-top:3rem;
+    padding-bottom:2rem !important;
+}
+
+
+@media screen and (max-width: 900px) {
+    .columnContainer {
+      flex-direction: column;
+      width:100vw;
+      margin-left:0;
+      margin-right:0;
+      justify-items:center;
+    }
+
+    .columnContainer >div
+    {
+        width:80%;
+        margin:auto;
+        margin-top:2rem;
+    }
+    
+    .contentSection .columnContainer >div
+    {
+        margin-top:5rem;
+    }
+
+    .contentSection
+    {
+        padding-bottom:3rem;
+    }
+
+    *
+    {
+        margin:auto;
+    }
+    html
+    {
+        font-size:0.9rem;
+        text-align: center;
+    }
+
+    h1,h2
+    {
+        overflow-wrap:normal;
+        font-size:3em !important;
+    }
+    
+
+    .orangeThing
+    {
+        display: none;
+    }
+
+    .colonnaHeaderImmagini
+    {
+        margin-bottom:4rem;
+    }
+
+    .logo
+    {
+        font-size:4rem !important;
+        margin-bottom:3rem !important;
+    }
+
+    .contentSection >p
+    {
+        max-width: 90%;
+    }
+
+    .navigation
+    {
+        font-size:1.5rem;
+    }
+
+    .navigation div 
+    {
+        margin-top: 1.2rem !important;
+    }
+
+    nav ul 
+    {
+        padding:0;
+        margin:0;
+    }
+    nav ul li
+    {
+        display:block !important;
+        margin:0 !important;
+    }
+
+    .squareEffect
+    {
+        display: none;
+    }
+
+    .endingSection
+    {
+        margin-top:0;
+        margin-bottom:0;
+        padding-bottom: 0;
+    }
+
+    .endingSection >*
+    {
+        margin:auto;
+        position:relative;
+        
+    }
+
+
+
+    .cornice
+    {
+        display:none;
+    }
+
+    .linea
+    {
+        display: none;
+    }
+
+    .sfondoEndingSection
+    {
+        margin-top:0;
+        width: 100%;
+        background-position: center;
+        height: 100%;
+        border-radius: 0;
+        padding-top:2.3rem;
+        padding-bottom:3rem;
+    }
+
+    .yellowBox
+    {
+        max-width: 80%;
+    }
+
+  }
